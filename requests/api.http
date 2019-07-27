@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/exercise/new-user
+# POST http://localhost:3000/api/exercise/add
+# POST http://localhost:3000/api/exercise/log?userId=uJs4d1or1
+Content-Type: application/json
+
+{
+    "userId": "HMoKpE3m7",
+    "description": 
+}

@@ -73,7 +73,7 @@ app.post('/api/exercise/add', async (req, res) => {
     const isDate = date instanceof Date && !isNaN(date);
 
     isValid = [];
-    if (req.body.description.length > 24)
+    if (req.body.description.length > 48)
       isValid.push('Description is too long');
     if (!/^\d+$/g.test(req.body.duration))
       isValid.push('Duration should be number only');

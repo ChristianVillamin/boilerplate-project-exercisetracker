@@ -40,6 +40,9 @@ app.post('/api/exercise/new-user', async (req, res) => {
   await User.findOne({ username: req.body.username }, (err, user) => {
     if (err) throw err;
 
+    if (req.body.username === '')
+      return res.json('Please enter a valid username.');
+
     if (!user) {
       user = new User({
         username: req.body.username,
